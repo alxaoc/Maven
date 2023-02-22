@@ -1,7 +1,9 @@
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriverService;
 import org.openqa.selenium.net.UrlChecker;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
@@ -16,10 +18,12 @@ public class TestStart {
 
     @BeforeClass
     public void setUp() {
+
         driver = new ChromeDriver();
+//      driver = new FirefoxDriver();
+//      driver = new EdgeDriver();
+//      driver = new SafariDriver();
         driver.manage().window().maximize();
-//        driver = new FirefoxDriver();
-//        driver = new SafariDriver();
     }
 
     @Test
